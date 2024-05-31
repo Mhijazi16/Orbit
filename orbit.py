@@ -20,3 +20,9 @@ def run_command(command=command,capture=False):
         print('Error:', e.stderr)
         return None
 
+def add(filename :str):
+    run_command(['git','add',filename])
+
+def commit(filename :str, message :str):
+    run_command(['git','commit','-m',filename])
+
