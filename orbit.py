@@ -26,3 +26,6 @@ def add(filename :str):
 def commit(filename :str, message :str):
     run_command(['git','commit','-m',filename])
 
+def dispaly(filename :str): 
+    show.append(filename) 
+    run_command(command=show,capture=True)
