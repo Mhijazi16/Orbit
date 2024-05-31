@@ -29,3 +29,17 @@ def commit(filename :str, message :str):
 def dispaly(filename :str): 
     show.append(filename) 
     run_command(command=show,capture=True)
+
+def handle_orbit_command(args :list):
+    pass
+
+def handle_git_command(args :list):
+    pass
+
+def init(): 
+    args = sys.argv
+    args.remove(args[0])
+    if os.path.exists(args[0]): 
+        handle_orbit_command(args)
+    else:
+        handle_git_command(args)
